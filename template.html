@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><!--#echo var="title" --></title>
+    <!--#include virtual="$head" -->
+  </head>
+  <body>
+    <div id="content-wrap">
+      <div id="top">
+        <div class="row">
+          <div class="column"><!--#include virtual="/top.html" --></div>
+          <div class="css-picker" id="css-picker"></div>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="column left"><!--#include virtual="$menu" --></div>
+        <div class="column middle"><!--#include virtual="$content" --></div>
+        <div class="column right"><!--#include virtual="/right.html" --></div>
+      </div>
+    </div>
+    <footer id="footer"><!--#include virtual="/foot.html" --></footer>
+    <script>setUpCss();</script>
+    <script>addCssButtons();</script>
+  </body>
+</html>
