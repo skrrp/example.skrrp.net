@@ -29,23 +29,23 @@
 </pre>
 <p>A sample site config looks like:</p>
 <pre class="mono grey-box">
-    <VirtualHost *:80>
+    &lt;VirtualHost *:80&gt;
         ServerName example.skrrp.net
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/example.skrrp.net/
-        <Directory /var/www/example.skrrp.net/>
+        &lt;Directory /var/www/example.skrrp.net/&gt;
                 Options -Indexes +FollowSymLinks
                 AllowOverride All
                 Require all granted
-        </Directory>
+        &lt;/Directory&gt;
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory "/">
+        &lt;Directory "/"&gt;
                 Options -Indexes
-        </Directory>
+        &lt;/Directory&gt;
         RewriteEngine on
         RewriteCond %{SERVER_NAME} =example.skrrp.net
         RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
-    </VirtualHost>
+    &lt;/VirtualHost&gt;
 </pre>
 
