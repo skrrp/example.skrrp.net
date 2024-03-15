@@ -85,12 +85,41 @@
 <p>The next defines the menu to use. Since this is the base <span class="mono grey-box">index.html</span> it uses the base menu. Pages within the subject areas of your site will probably use different menu files.</p>
 <p>The next tells the page which content to load. This is an absolute path to the content file.</p>
 <p>The final line tells the server to load the base template file and kick it all off.</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<h4>The template</h4>
+<p>You shouldn't need to edit this much, or at all once you are happy with the layout. By default it has a top header bar to the page, then a 3-column layout. The left column is designed for the menu, the central big one for the page content and the right-hand column is for ... ads? Links to other sites? Anything you want. If you don't want to use the right column then you can remove it from the template file, or simply set it to 0% in the CSS.</p>
+<pre class="mono grey-box">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;title&gt;&lt;!--#echo var="title" --&gt;&lt;/title&gt;
+        &lt;!--#include virtual="$head" --&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div id="content-wrap"&gt;
+          &lt;div id="top"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="column"&gt;&lt;!--#include virtual="/top.html" --&gt;&lt;/div&gt;
+              &lt;div class="css-picker" id="css-picker"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+          &lt;/div&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="column left"&gt;&lt;!--#include virtual="$menu" --&gt;&lt;/div&gt;
+            &lt;div class="column middle"&gt;&lt;!--#include virtual="$content" --&gt;&lt;/div&gt;
+            &lt;div class="column right"&gt;&lt;!--#include virtual="/right.html" --&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;footer id="footer"&gt;&lt;!--#include virtual="/foot.html" --&gt;&lt;/footer&gt;
+        &lt;script&gt;setUpCss();&lt;/script&gt;
+        &lt;script&gt;addCssButtons();&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+<p>As you can see, this is a bare-bones HTML page, devoid of content ... well, anything really. It starts by setting the title, then loading the header file.</p>
+<p>The top <span class="mono grey-box">div</span> holds the site banner content defined in <span class="mono grey-box">top.html</span>, then there is the section for the custom CSS loaded in by the theme picker buttons.</p>
+<p>Then comes the 3-column layout, loading the menu as defined in the calling page, the content from the same, and then the right sidebar that comes from <span class="mono grey-box">right.html</span>.</p>
+<p>It finishes up by loading a footer message from <span class="mono grey-box">foot.html</span>, then it tries to execute a couple of functions from the JavaScript. The first applies the CSS theme - if there is any currently set in the user cookie - then it sets up the buttons. The functionality with JavaScript disabled is that the site is always displayed in high-contrast light theme and the selector buttons are not displayed. Things could be worse.</p>
+<p>Note that in the navigation HTML pages, the reference to the template is from <span class="italic">the navigation file</span> file, but the reference to any content is from <span class="italic">the template</span> (root directory).</p>
 <p></p>
 <p></p>
 <p></p>
