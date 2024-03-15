@@ -27,4 +27,25 @@
 <pre class="mono grey-box">
     sudo systemctl restart apache2
 </pre>
+<p>A sample site config looks like:</p>
+<pre class="mono grey-box">
+    <VirtualHost *:80>
+        ServerName example.skrrp.net
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/example.skrrp.net/
+        <Directory /var/www/example.skrrp.net/>
+                Options -Indexes +FollowSymLinks
+                AllowOverride All
+                Require all granted
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        <Directory "/">
+                Options -Indexes
+        </Directory>
+        RewriteEngine on
+        RewriteCond %{SERVER_NAME} =example.skrrp.net
+        RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+    </VirtualHost>
+</pre>
 
