@@ -48,4 +48,70 @@
         RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
     &lt;/VirtualHost&gt;
 </pre>
-
+<p>Securing the site with SSL is left as an exercise to the reader. It is best to use Let's Encrypt - <a href="https://letsencrypt.org/">https://letsencrypt.org/</a>.</p>
+<p>You should then clone the repo into a directory on your server and alter the config above to reflect where it is placed. Then enable the site with:</p>
+<pre class="mono grey-box">
+    a2ensite 000-example.skrrp.net.conf
+</pre>
+<p>then reload your configuration:</p>
+<pre class="mono grey-box">
+    service apache2 reload
+</pre>
+<p>If you get any errors on the reload you should investigate and fix. Good luck.</p>
+<p>You should then replace the <span class="mono grey-box">img/site.ico</span>, <span class="mono grey-box">img/logo.png</span> and <span class="mono grey-box">img/logo-dark.png</span> files with your own branding. At this point, the example site should be running.</p>
+<h2>How to use this template</h2>
+<p>The template tries its best to separate concerns - style, navigation and content. It's not a full CMS even if you squint and it still requires manual effort to get it to hang together but it's simple and easy to create fast loading sites with simple HTML.</p>
+<h3>Style</h3>
+<p>Style is probably the easiest. The <span class="mono grey-box">site.css</span> file is loaded first and should contain all of your static style elements.</p>
+<p>Anything that is related to theme needs to be clumsily added into the array in <span class="mono grey-box">js/css-picker.js</span>. I have not built a full theming engine sorry. While I have settled on 4 basic themes - a mix of hi- and low- contrast in light and dark - there is in theory no limit to how many you may have. Simply add to the <span class="mono grey-box">js</span> file to create new ones and make buttons for them.</p>
+<p>Since the CSS is loaded first and the JavaScript applied afterwards you may put elements in both. In fact, it is best for the CSS to work for the entire site with JavaScript disabled.</p>
+<h3>Content</h3>
+<p>Content is also easy. Each content page is a simple HTML page. You should put everything that goes inside a <span class="mono grey-box">body</span> tag in the file - that is start with a heading and end at the end of the content. Any and all HTML elements are available.</p>
+<p>You can organise content as you wish, but I find it easier to create separate sub-directories in my site for each subject area and then an additional content directory in each. The base content directory in the example layout contains content to do with the site rather than subject matter - eg: the main index and the about page.</p>
+<h3>Layout</h3>
+<p>This is the tricky one and is still a bit clunky.</p>
+<p>I am aware that it is possible to read from the URL and dynamically load content. I have chosen not to go this route as it allows fishing expiditions and directory traversal attacks simply by modifying the URL. This means that each and every content page needs a layout page to mirror it.</p>
+<p>This is the site's main <span class="mono grey-box">index.html</span>:</p>
+<pre class="mono grey-box">
+    &lt;!--#set var="title" value="example.skrrp.net" --&gt;
+    &lt;!--#set var="head" value="head.html" --&gt;
+    &lt;!--#set var="menu" value="menu.html" --&gt;
+    &lt;!--#set var="content" value="/content/index.html" --&gt;
+    &lt;!--#include file="template.html" --&gt;
+</pre>
+<p>These files are all very similar and are a pain to create, but they make the site work.</p>
+<p>The first line sets the title of the page - the words that appear in the browser's title bar or on the tab.</p>
+<p>The next defines the header file to use. This is likely to be the same each and every time, but it allows for swapping out of header files to include extra functionality on certain pages. </p>
+<p>The next defines the menu to use. Since this is the base <span class="mono grey-box">index.html</span> it uses the base menu. Pages within the subject areas of your site will probably use different menu files.</p>
+<p>The next tells the page which content to load. This is an absolute path to the content file.</p>
+<p>The final line tells the server to load the base template file and kick it all off.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>

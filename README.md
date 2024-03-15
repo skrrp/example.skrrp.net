@@ -78,7 +78,7 @@ You should then replace the `img/site.ico`, `img/logo.png` and `img/logo-dark.pn
 
 ## How to use this template
 
-The template tries its best to separate concerns - style, navigation and content. It's not a full CMS even if you squint and still requires manual effort to get it to hang together but it's simple and easy to create fast loading sites with simple HTML.
+The template tries its best to separate concerns - style, navigation and content. It's not a full CMS even if you squint and it still requires manual effort to get it to hang together but it's simple and easy to create fast loading sites with simple HTML.
 
 ### Style
 
