@@ -8,7 +8,7 @@ Note this is NOT a static site generator, there are plenty of those elsewhere.
 
 ### SVG 
 
-The icons for changing theme are included in the bundle and are free to use.
+The icons for changing theme are included in the MIT license and are free to use.
 
 ### Fonts 
 
@@ -238,3 +238,20 @@ Here is the menu from a subject:
     <!--#include virtual="../menu.html" -->
 
 This contains links to all the content pages in this subject area at the top, then also includes the main menu below. This puts the navigation of the subject in a group as well as allowing quick navigation to other subject areas below.
+
+## Further work
+
+For a simple site this system is a bit clunky, but works well.
+
+I am also working on a project that is a website and an EPUB book at the same time, with multiple authors. Obviously, the binary blob of an EPUB zip is terrible for git and collaboration, so the workflow is;
+
+* Edit the EPUB locally
+* Run a local script to unzip the EPUB into its contents
+* Commit and push everything _but_ the EPUB file
+* On the server, pull the repo
+* Re-zip the contents of the EPUB into a book in the web directory
+* Use some `sed` magic to convert the EPUB pages into content files for the template
+* Run a PHP script to build the menu from the files available
+* There is now a fresh downloadable e-book on the website, as well as its content in web pages
+
+It's a tough workflow, but shows what can be done with simple templating and scripting.
