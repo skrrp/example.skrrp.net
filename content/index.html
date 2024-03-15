@@ -119,29 +119,82 @@
 <p>The top <span class="mono grey-box">div</span> holds the site banner content defined in <span class="mono grey-box">top.html</span>, then there is the section for the custom CSS loaded in by the theme picker buttons.</p>
 <p>Then comes the 3-column layout, loading the menu as defined in the calling page, the content from the same, and then the right sidebar that comes from <span class="mono grey-box">right.html</span>.</p>
 <p>It finishes up by loading a footer message from <span class="mono grey-box">foot.html</span>, then it tries to execute a couple of functions from the JavaScript. The first applies the CSS theme - if there is any currently set in the user cookie - then it sets up the buttons. The functionality with JavaScript disabled is that the site is always displayed in high-contrast light theme and the selector buttons are not displayed. Things could be worse.</p>
-<p>Note that in the navigation HTML pages, the reference to the template is from <span class="italic">the navigation file</span> file, but the reference to any content is from <span class="italic">the template</span> (root directory).</p>
+<p>Note that in the navigation HTML pages, the reference to the template is from <span class="italic">the navigation file</span>, but the reference to any content is from <span class="italic">the template</span> (root directory).</p>
 <h4>head.html</h4>
 <p>This is the first part of the page and is delivered before any renderable content.</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<pre class="mono grey-box">
+    &lt;link rel="stylesheet" type="text/css" href="/site.css"&gt;
+    &lt;style id="swap-style"&gt;body:{background-color:#ffffff;color:#000000;}input{background-color:#ffffff;color:#000000;}a:link{color:#0066cc;}a:visited{color:#5518ab;}a:hover{color:#0066cc;}a:active{color:#ee0000;}a.no-href{all:unset;cursor:pointer;color:#000000;}.grey-box{background-color:#dcdcdc;padding:5px;}&lt;/style&gt;
+    &lt;link rel="icon" type="image/x-icon" href="/img/site.ico"&gt;
+    &lt;script src="/js/css-picker.js"&gt;&lt;/script&gt;
+    &lt;meta charset="utf-8"&gt;
+</pre>
+<p>As you can see, it loads the CSS, sets the 'default' theme, sets the site's favicon - the little icon in the browser tab - then loads the scripts and sets the character set. You can edit this as you need.</p>
+<p>You may have multiple headers, where some pages need a lot more JavaScript to be loaded for example. It keeps the page load clean if you only load what you need.</p>
+<h4>top.html</h4>
+<p>This is the header bar of the page.</p>
+<pre class="mono grey-box">
+    &lt;h1&gt;
+      &lt;a class="no-href" href="https://example.skrrp.net"&gt;
+        &lt;img id="header-image" src="/img/logo.png" alt="Posternity logo"&gt;&nbsp;&lt;span class="big"&gt;example.skrrp.net&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/h1&gt;
+</pre>
+<p>It simply loads the site logo and name. You can replace the name with a full logo if you wish.</p>
+<p>Despite being big the top scrolls with the page content, so screen real-estate is not lost despite the size.</p>
+<h4>right.html</h4>
+<p>A simple example of what might be here. The default template only provides marker text.</p>
+<h4>foot.html</h4>
+<p>The site footer, to be displayed on all pages. It tries to keep it at the bottom - that is the bottom of the page with short content and below the content for long content. It does this with varying degrees of success.</p>
+<h4>menu.html</h4>
+<p>This is the left navigation bar and can become complex. I try to keep my base - in the root directory - menu short, then expand it when people get into content areas.</p>
+<p>Here is the example root menu:</p>
+<pre class="mono grey-box">
+    &lt;ul class="no-bullet"&gt;
+      &lt;li&gt;&lt;a class="no-href" href="/index.html"&gt;example.skrrp.net&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;ul class="no-bullet"&gt;
+          &lt;li&gt;&lt;a href="/index.html"&gt;Main page&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="/about.html"&gt;About site&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;br/&gt;
+      &lt;li&gt;Subjects&lt;/li&gt;
+      &lt;li&gt;
+        &lt;ul class="no-bullet"&gt;
+          &lt;li&gt;&lt;a href="/subject-1/index.html"&gt;Subject 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="/subject-2/index.html"&gt;Subject 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;li&gt;
+    &lt;/ul&gt;
+</pre>
+<p>At the top it has links to information about the site itself - the root and the about page. Lower down it has links to the start of each subject section - the landing page of each subject sub-site.</p>
+<p>Here is the menu from a subject:</p>
+<pre class="mono grey-box">
+    &lt;ul class="no-bullet"&gt;
+      &lt;li&gt;Subject 1&lt;/li&gt;
+      &lt;li&gt;
+        &lt;ul class="no-bullet"&gt;
+          &lt;li&gt;&lt;a href="/subject-1/index.html"&gt;Index&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="/subject-1/page-001.html"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="/subject-1/page-002.html"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!--#include virtual="../menu.html" --&gt;
+</pre>
+<p>This contains links to all the content pages in this subject area at the top, then also includes the main menu below. This puts the navigation of the subject in a group as well as allowing quick navigation to other subject areas below.</p>
+<h2>Further work</h2>
+<p>For a simple site this system is a bit clunky, but works well.</p>
+<p>I am also working on a project that is a website and an EPUB book at the same time, with multiple authors. Obviously, the binary blob of an EPUB zip is terrible for git and collaboration, so the workflow is;</p>
+<ul>
+<li>Edit the EPUB locally</li>
+<li>Run a local script to unzip the EPUB into its contents</li>
+<li>Commit and push everything <span class="italic">but</span> the EPUB file</li>
+<li>On the server, pull the repo</li>
+<li>Re-zip the contents of the EPUB into a book in the web directory</li>
+<li>Use some <span class="mono grey-box">sed</span> magic to convert the EPUB pages into content files for the template</li>
+<li>Run a PHP script to build the menu from the files available</li>
+<li>There is now a fresh downloadable e-book on the website, as well as its content in web pages</li>
+</ul>
+<p>It's a tough workflow, but shows what can be done with simple templating and scripting.</p>

@@ -159,7 +159,7 @@ Then comes the 3-column layout, loading the menu as defined in the calling page,
 
 It finishes up by loading a footer message from `foot.html`, then it tries to execute a couple of functions from the JavaScript. The first applies the CSS theme - if there is any currently set in the user cookie - then it sets up the buttons. The functionality with JavaScript disabled is that the site is always displayed in high-contrast light theme and the selector buttons are not displayed. Things could be worse.
 
-Note that in the navigation HTML pages, the reference to the template is from _the navigation file_ file, but the reference to any content is from _the template_ (root directory).
+Note that in the navigation HTML pages, the reference to the template is from _the navigation file_, but the reference to any content is from _the template_ (root directory).
 
 #### head.html
 
@@ -191,7 +191,7 @@ Despite being big the top scrolls with the page content, so screen real-estate i
 
 #### right.html
 
-A simple example of what might be here. The default template only provides marker text
+A simple example of what might be here. The default template only provides marker text.
 
 #### foot.html
 
