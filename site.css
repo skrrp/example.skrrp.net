@@ -5,9 +5,19 @@
   src: url("font/OakSans-Regular.woff2");
 }
 
+@font-face {
+  font-family: "PitagonSansMono";
+  font-weight: normal;
+  src: url("font/PitagonSansMono-Regular.woff2");
+}
+
 body {
   font-family: "OakSans", Helvetica, sans-serif;
   margin: 0;
+}
+
+.mono {
+  font-family: "PitagonSansMono", Courier, monospace;
 }
 
 #content-wrap {
