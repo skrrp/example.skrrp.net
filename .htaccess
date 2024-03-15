@@ -7,3 +7,4 @@ RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://example.skrrp.net/$1 [R,L]
 RedirectMatch 404 /\.git
 RedirectMatch 404 /README.md
+RedirectMatch 404 /LICENSE
