@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="matrix(0.99472794,0,0,0.99471395,-49.604595,-49.603897)"
+     style="fill:#ffffff;fill-opacity:1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1"
+       id="rect39"
+       width="50"
+       height="50"
+       x="50"
+       y="50"
+       d="m 55,50 h 40 a 5,5 45 0 1 5,5 v 40 a 5,5 135 0 1 -5,5 H 55 A 5,5 45 0 1 50,95 V 55 a 5,5 135 0 1 5,-5 z" />
+    <g
+       aria-label="Aa"
+       id="text4372"
+       style="font-size:37.0126px;line-height:1.25;stroke-width:0.925316">
+      <path
+         d="M 71.534216,82.095541 H 58.986945 l -2.590882,6.477205 H 53.101941 L 63.61352,62.663926 h 3.257109 L 77.41922,88.572746 H 74.125098 Z M 70.423838,79.319596 65.279087,66.476224 60.097323,79.319596 Z"
+         style="font-family:'Oak Sans';-inkscape-font-specification:'Oak Sans, Normal';fill:#000000"
+         id="path41838" />
+      <path
+         d="m 91.409844,86.092902 q -1.739592,2.923995 -5.440852,2.923995 -3.294122,0 -5.107739,-1.480504 -1.813617,-1.480504 -1.813617,-4.182423 0,-2.775945 1.85063,-4.293462 1.887642,-1.517517 5.255789,-1.517517 h 5.181764 q -0.185063,-2.664907 -1.332454,-3.960348 -1.110378,-1.295441 -3.331134,-1.295441 -1.554529,0 -2.627894,0.629215 -1.073366,0.592201 -1.776605,1.924655 l -2.664907,-1.073366 q 2.294781,-4.145411 7.069406,-4.145411 3.849311,0 5.736953,2.257769 1.924655,2.257768 1.887643,6.662268 l -0.03701,10.030414 h -2.70192 z m -9.364188,-2.775945 q 0,1.443491 1.073366,2.294781 1.073365,0.814277 2.99802,0.814277 2.405819,0 3.812298,-1.517516 1.443491,-1.517517 1.443491,-4.145411 v -0.740252 h -4.552549 q -2.516857,0 -3.664248,0.851289 -1.110378,0.814278 -1.110378,2.442832 z"
+         style="font-family:'Oak Sans';-inkscape-font-specification:'Oak Sans, Normal';fill:#000000"
+         id="path41840" />
+    </g>
+  </g>
+</svg>

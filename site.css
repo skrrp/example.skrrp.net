@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "OakSans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("font/OakSans-Regular.woff2");
+}
+
+body {
+  font-family: "OakSans", Helvetica, sans-serif;
+  margin: 0;
+}
+
+#content-wrap {
+  min-height: calc(100vh - 80px);
+  margin-bottom: 2.5rem;
+}
+
+#top {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.centre {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.big {
+  font-size: 150%;
+}
+
+.mid {
+  font-size: 110%;
+}
+
+.small {
+  font-size: 75%;
+}
+
+.darkgreen {
+  color: darkgreen;
+}
+
+.darkred {
+  color: darkred;
+}
+
+.grey-box {
+  background-color: gainsboro;
+  padding: 5px;
+}
+
+.keep-together {
+  white-space: nowrap;
+}
+
+.super {
+  vertical-align: super;
+  font-size: 70%;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.column {
+  float: left;
+  padding-right: 10px;
+}
+
+.left {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+.right {
+  width: 20%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.css-picker {
+  float: right;
+  margin-top: 20px;
+}
+
+.css-picker-content {
+}
+
+img.style-image-button {
+  margin: 1px;
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  all: unset;
+}
+
+table {
+  width: 100%;
+  border: 1px gainsboro solid;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  border: 1px gainsboro solid;
+  vertical-align: top;
+}
+
+th.narrow {
+  width: 20%;
+}
+
+td {
+  border: 1px gainsboro solid;
+  vertical-align: top;
+}
+
+td.shrink {
+  padding-right: 0.5rem;
+  white-space: nowrap;
+}
+
+td.absorb {
+  width: 100%;
+  padding-left: 0.25rem;
+}
