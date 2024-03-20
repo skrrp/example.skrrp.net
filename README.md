@@ -153,7 +153,7 @@ You shouldn't need to edit this much, or at all once you are happy with the layo
 
 As you can see, this is a bare-bones HTML page, devoid of content ... well, anything really. It starts by setting the title, then loading the header file.
 
-The top `div` holds the site banner content defined in `top.html`, then there is the section for the custom CSS loaded in by the theme picker buttons.
+The top `div` holds the site banner content defined in `top.html`, then there is the section for the CSS theme picker buttons.
 
 Then comes the 3-column layout, loading the menu as defined in the calling page, the content from the same, and then the right sidebar that comes from `right.html`.
 

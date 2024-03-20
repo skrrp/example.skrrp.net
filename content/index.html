@@ -116,7 +116,7 @@
     &lt;/html&gt;
 </pre>
 <p>As you can see, this is a bare-bones HTML page, devoid of content ... well, anything really. It starts by setting the title, then loading the header file.</p>
-<p>The top <span class="mono grey-box">div</span> holds the site banner content defined in <span class="mono grey-box">top.html</span>, then there is the section for the custom CSS loaded in by the theme picker buttons.</p>
+<p>The top <span class="mono grey-box">div</span> holds the site banner content defined in <span class="mono grey-box">top.html</span>, then there is the section for the CSS theme picker buttons.</p>
 <p>Then comes the 3-column layout, loading the menu as defined in the calling page, the content from the same, and then the right sidebar that comes from <span class="mono grey-box">right.html</span>.</p>
 <p>It finishes up by loading a footer message from <span class="mono grey-box">foot.html</span>, then it tries to execute a couple of functions from the JavaScript. The first applies the CSS theme - if there is any currently set in the user cookie - then it sets up the buttons. The functionality with JavaScript disabled is that the site is always displayed in high-contrast light theme and the selector buttons are not displayed. Things could be worse.</p>
 <p>Note that in the navigation HTML pages, the reference to the template is from <span class="italic">the navigation file</span>, but the reference to any content is from <span class="italic">the template</span> (root directory).</p>
