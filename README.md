@@ -12,13 +12,17 @@ The icons for changing theme are included in the MIT license and are free to use
 
 ### Fonts 
 
-The fonts included in the `font` directory are included under the Open Font License (read it here: https://openfontlicense.org/ )
+The Oak Sans and Pitagon Sans fonts included in the `font` directory are included under the Open Font License (read it here: https://openfontlicense.org/ )
 
 You may use them, or replace them as you wish. They were both downloaded from https://fontesk.com/ , a great resource for free fonts. Make sure you use the web versions.
 
 https://fontesk.com/oak-sans-typeface/
 
 https://fontesk.com/pitagon-sans-mono-font/
+
+The Atkinson Hyperlegible font included in the `font` directory is used under a free license from the Braille Institute.
+
+https://brailleinstitute.org/freefont
 
 A note on fonts - when testing the site with JavaScript disabled in Firefox (as you should) - I noticed that the custom fonts don't load at all even though they are pure CSS. I do not know if this is a bug or intended behaviour, but you should also test with JavaScript enabled to see the font you are using.
 

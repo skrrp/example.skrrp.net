@@ -11,9 +11,11 @@
   src: url("font/PitagonSansMono-Regular.woff2");
 }
 
-body {
-  font-family: "OakSans", Helvetica, sans-serif;
-  margin: 0;
+@font-face {
+  font-family: "AtkinsonHyperlegible";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Atkinson-Hyperlegible-Regular-102a.woff2");
 }
 
 .mono {
