@@ -51,7 +51,7 @@ function changeCss(type) {
   
   if (type) {
     const date = new Date(new Date().setFullYear(new Date().getFullYear() + 10));
-    document.cookie = "site-theme="+type+"; expires="+date.toUTCString()+"; max; path=/; samesite=lax;";
+    document.cookie = "site-theme="+type+"; max; path=/; samesite=lax;";
   }
 }
 
@@ -63,7 +63,7 @@ function changeFont(type) {
 
   if (type) {
     const date = new Date(new Date().setFullYear(new Date().getFullYear() + 10));
-    document.cookie = "site-font="+type+"; expires="+date.toUTCString()+"; max; path=/; samesite=lax;";
+    document.cookie = "site-font="+type+"; max; path=/; samesite=lax;";
   }
 }
 
