@@ -29,10 +29,10 @@ function getFont(type) {
 
 function getImage(type) {
   const img = {
-    'light-hi': function() { return '/img/skrrp.png'; },
-    'light-lo': function() { return '/img/skrrp.png'; },
-    'dark-lo': function() { return '/img/skrrp-dark.png'; },
-    'dark-hi': function() { return '/img/skrrp-dark.png'; },
+    'light-hi': function() { return '/img/logo.png'; },
+    'light-lo': function() { return '/img/logo.png'; },
+    'dark-lo': function() { return '/img/logo-dark.png'; },
+    'dark-hi': function() { return '/img/logo-dark.png'; },
   };
   if (!type in img) type = 'light-hi';
   return img[type]();
